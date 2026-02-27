@@ -41,13 +41,6 @@ jobs:
       - name: Terraform Plan
         run: terraform plan
 
-      # 6.1️⃣ Reconfigure AWS to assume investimentos-role for bucket creation
-      - name: Configure AWS credentials (assume investimentos-role)
-        uses: aws-actions/configure-aws-credentials@v4
-        with:
-          role-to-assume: arn:aws:iam::458144597632:role/investimentos-role
-          aws-region: us-east-1
-
       # 7️⃣ DEPLOY — aplica na AWS
       - name: Terraform Apply
         run: terraform apply -auto-approve
