@@ -1,6 +1,6 @@
-#Documentação gerada com o uso de Inteligência Artificial
+# Documentação gerada com o uso de Inteligência Artificial
 
-# Pipeline Buckets SOR-SOT-SPEC
+# Pipeline de Buckets SOR-SOT-SPEC
 
 Infraestrutura como código (IaC) para provisionar buckets S3 AWS seguindo o padrão de arquitetura SOR-SOT-SPEC de dados de investimentos.
 
