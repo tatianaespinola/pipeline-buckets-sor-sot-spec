@@ -1,11 +1,11 @@
 resource "aws_s3_bucket" "sor" {
-  bucket = "tatiana-bucket-SOR-investimentos"
+  bucket = "tatiana_bucket_SOR_investimentos"
 }
 
 resource "aws_s3_bucket" "sot" {
-  bucket = "tatiana-bucket-SOT-investimentos"
+  bucket = "tatiana_bucket_SOT_investimentos"
 }
 
 resource "aws_s3_bucket" "spec" {
-  bucket = "tatiana-bucket-SPEC-investimentos"
+  bucket = "tatiana_bucket_SPEC_investimentos"
 }
