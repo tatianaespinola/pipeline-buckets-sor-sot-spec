@@ -22,7 +22,7 @@ jobs:
       - name: Configure AWS credentials (OIDC)
         uses: aws-actions/configure-aws-credentials@v4
         with:
-          role-to-assume: arn:aws:iam::458144597632:role/investimentos-role
+          role-to-assume: arn:aws:iam::458144597632:role/role-github
           aws-region: us-east-1
 
       # 3️⃣ Instala o Terraform
@@ -40,6 +40,13 @@ jobs:
       # 6️⃣ TEST — simula mudanças
       - name: Terraform Plan
         run: terraform plan
+
+      # 6.1️⃣ Reconfigure AWS to assume investimentos-role for bucket creation
+      - name: Configure AWS credentials (assume investimentos-role)
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: arn:aws:iam::458144597632:role/investimentos-role
+          aws-region: us-east-1
 
       # 7️⃣ DEPLOY — aplica na AWS
       - name: Terraform Apply
