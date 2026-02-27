@@ -1,14 +1,11 @@
-resource "aws_s3_bucket" "sor" {
-  provider = aws.investimentos
-  bucket   = "tatiana-bucket-sor-investimentos"
+output "sor_bucket_arn" {
+  value = aws_s3_bucket.sor.arn
 }
 
-resource "aws_s3_bucket" "sot" {
-  provider = aws.investimentos
-  bucket   = "tatiana-bucket-sot-investimentos"
+output "sot_bucket_arn" {
+  value = aws_s3_bucket.sot.arn
 }
 
-resource "aws_s3_bucket" "spec" {
-  provider = aws.investimentos
-  bucket   = "tatiana-bucket-spec-investimentos"
+output "spec_bucket_arn" {
+  value = aws_s3_bucket.spec.arn
 }
